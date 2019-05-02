@@ -1,0 +1,71 @@
+/*container*/
+.container {
+    border-radius:50%;
+    width:4rem;
+    height:4rem;
+    background:linear-gradient(to right,black 50%,rgb(245, 242, 242) 50%);
+    margin: 0 auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-2rem;
+    margin-top:-2rem;
+    animation: animationC 3s linear infinite normal;
+}
+
+/*black*/
+.black {
+    width:2rem;
+    height:2rem;
+    margin:0 auto;
+    border-radius:50%;
+    background:radial-gradient(circle,black 25%,rgb(245, 242, 242) 25%);
+    animation-name:animation1;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in-out;
+    animation-direction:alternate;
+}
+
+/*white*/
+.white {
+    width:2rem;
+    height:2rem;
+    margin:0 auto;
+    border-radius:50%;
+    background:radial-gradient(circle,rgb(245, 242, 242) 25%,black 25%);
+    animation: animation2 1s ease-in-out infinite alternate;
+}
+
+/*animation 1*/
+@keyframes animation1 {
+    0% {
+        width:1rem;
+        height:1rem;
+    }
+
+    100% {
+        width:3rem;
+        height:3rem;
+    }
+}
+
+/*animation2*/
+@keyframes animation2 {
+    0% {
+        width:3rem;
+        height:3rem;
+    }
+
+    100% {
+        width:1rem;
+        height:1rem;
+    }
+}
+
+/*animationC*/
+@keyframes animationC {
+    0% {transform:rotate(360deg)}
+    50% {transform:rotate(180deg)}
+    100% {transform:rotate(0deg)}
+}
